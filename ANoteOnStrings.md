@@ -23,11 +23,11 @@ void testString() {
 
 One might expect the diagram to look like the following at the end of this method:
 
-![MG_462](/Users/manaspurohit/Downloads/IMG_4620.JPG)
+![MG_462](https://github.com/manaspurohit/FundiesII2018FinalExamples/blob/master/StringDiagrams/IMG_4620.JPG)
 
 However, in reality, the diagram is the following:
 
-![MG_719](/Users/manaspurohit/Downloads/IMG_7195.JPG)
+![MG_719](https://github.com/manaspurohit/FundiesII2018FinalExamples/blob/master/StringDiagrams/IMG_7195.JPG)
 
 The reason lies within the concat method. The signature for concat is `String` -> `String`. This means that it is producing a **new** `String` instead of mutating the `String` it is called on. So, the object that s1 points to isn't mutated at all. Instead, the concat method takes the data within that object and combines it with the data from the object that s2 points to to create a new `String` object which it returns. s3 then points to this new `String`.
 
