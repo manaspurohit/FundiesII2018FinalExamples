@@ -13,14 +13,14 @@ class Node implements IIntTree {
 		this.right = right;
 	}
 
-	<R> R accept(IFooVisitor<R> visitor) {
+	<R> R accept(ITreeVisitor<R> visitor) {
 		visitor.visitNode(this);
 	}
 }
 
 class Leaf implements IIntTree {
 
-	<R> R accept(IFooVisitor<R> visitor) {
+	<R> R accept(ITreeVisitor<R> visitor) {
 		visitor.visitLeaf(this);
 	}
 }
